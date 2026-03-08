@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.node
+    ports:
+      - "3000:3000"
+    depends_on:
+      - agent
+      - redis
+
+  agent:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.python
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
