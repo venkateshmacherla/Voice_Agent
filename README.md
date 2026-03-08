@@ -10,9 +10,9 @@ All services are containerized with Docker and orchestrated using Docker Compose
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 1. Clone the repository
+**1. Clone the repository**
 ```bash
 git clone <your-repo-url>
 cd voice-ai-agent
